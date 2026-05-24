@@ -1,0 +1,194 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#B0C4DE;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.wrapper{
+width:1100px;
+background:white;
+border-radius:15px;
+padding:40px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* header */
+.header{
+margin-bottom:30px;
+}
+
+/* catagories */
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.category{
+background:#f5f7fb;
+padding:25px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.category:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.category img{
+width:60px;
+margin-bottom:10px;
+}
+
+/* catagory page */
+.category-screen{
+display:none;
+}
+
+.category-header{
+display:flex;
+align-items:center;
+gap:20px;
+margin-bottom:30px;
+}
+
+.category-header img{
+width:70px;
+}
+
+.back-btn{
+margin-bottom:20px;
+padding:10px 18px;
+border:none;
+background:#39a6f0;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* tasks */
+.tasks{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.task{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#f9f9f9;
+padding:15px;
+border-radius:6px;
+}
+
+.task button{
+background:#ff4d4d;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.task button:hover{
+background:#e60000;
+}
+
+/* ADD BUTTON */
+.add-task-btn{
+position:fixed;
+bottom:40px;
+right:40px;
+width:70px;
+height:70px;
+background:#39a6f0;
+color:white;
+font-size:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* POPUP */
+.add-task{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:40px;
+border-radius:10px;
+width:400px;
+display:none;
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.add-task.active{
+display:block;
+}
+
+.input-group{
+margin-bottom:20px;
+}
+
+.input-group input,
+.input-group select{
+width:100%;
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.btns{
+display:flex;
+justify-content:flex-end;
+gap:10px;
+}
+
+.add-btn{
+background:#39a6f0;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.cancel-btn{
+background:#ddd;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.black-backdrop{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+display:none;
+}
+
+.black-backdrop.active{
+display:block;
+}
